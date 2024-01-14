@@ -5,7 +5,7 @@
 
     --clr-primary-orange: hsl(26, 100%, 55%);
     --clr-secondary-orange: hsl(25, 100%, 94%);
-    
+
     --blue-700: hsl(220, 13%, 13%);
     --blue-600: hsl(219, 9%, 45%);
     --blue-500: hsl(220, 14%, 75%);
@@ -28,6 +28,7 @@
 
 /* prefix styling */
 * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -53,7 +54,9 @@ a {
     cursor: pointer;
 }
 
-img {width: 100%;}
+img {
+    width: 100%;
+}
 
 
 button {
@@ -70,13 +73,19 @@ a {
 /* main container */
 .container {
     padding-bottom: 2rem;
+    -webkit-transition: background .4s linear;
+    -o-transition: background .4s linear;
     transition: background .4s linear;
 }
 
 /* header */
 header {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 2rem;
 
@@ -108,11 +117,14 @@ header {
     bottom: -12rem;
 
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
 
     width: 90%;
 
     background: var(--clr-light);
+    -webkit-box-shadow: 0 0 10px 4px rgba(0, 0, 0, .40);
     box-shadow: 0 0 10px 4px rgba(0, 0, 0, .40);
     z-index: 999;
     border-radius: 10px;
@@ -130,7 +142,10 @@ header {
 
 /* fileld cart  */
 .products-cart-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 1rem;
     font-size: 0.75rem;
@@ -172,7 +187,12 @@ header {
 
 /* main nav bar for mobile view */
 .main-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 2rem;
 
@@ -206,9 +226,12 @@ header {
 }
 
 .arrow {
+    display: -ms-grid;
     display: grid;
     position: absolute;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     place-items: center;
 
@@ -228,13 +251,18 @@ header {
 }
 
 .hero {
+    display: -ms-grid;
     display: grid;
     place-items: center;
     /* outline: 1px solid red; */
 }
 
 .hero-images-thumbnail {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
     gap: 1.5rem;
     /* width: fit-content; */
@@ -288,8 +316,14 @@ header {
 
 /* price styling */
 .price-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 
 }
@@ -322,7 +356,12 @@ header {
 
 /* adding and removing items */
 .add-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 2rem;
 
@@ -342,8 +381,14 @@ header {
 }
 
 .add-item-input {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     gap: 1rem;
     width: 100%;
@@ -376,6 +421,9 @@ header {
     /* main list */
     .main-list {
         position: static;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
         height: auto;
         padding: 0;
@@ -393,7 +441,9 @@ header {
 
     /* main */
     main {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 1fr 2rem 1fr;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
 
@@ -413,11 +463,16 @@ header {
     }
 
     .hero-images-thumbnail {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 
     /* input files and add btn */
     .add-item {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
     }
 
@@ -427,6 +482,8 @@ header {
         right: 2rem;
 
         left: auto;
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
         transform: translateX(0);
 
         width: 350px;
